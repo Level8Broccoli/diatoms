@@ -2,24 +2,16 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/o-bucher/.oh-my-zsh"
+export ZSH="/home/oliver-bucher-wsl/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
+SPACESHIP_PROMPT_ORDER=(user host dir git node exec_time line_sep jobs exit_code char time)
 
-SPACESHIP_PROMPT_ADD_NEWLINE="true"
-# SPACESHIP_CHAR_SYMBOL=" \uf0e7"
-# SPACESHIP_CHAR_PREFIX="\uf296"
-SPACESHIP_CHAR_SUFFIX=(" ")
-# SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
-SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
-SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
-SPACESHIP_USER_SHOW="true"
-
-
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -80,13 +72,12 @@ SPACESHIP_USER_SHOW="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    bundler
-    dotenv
-    osx
-    rake
-    rbenv
-    ruby
+    nvm
+    zsh-syntax-highlighting
+    zsh-autosuggestions
 )
+
+ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,6 +106,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# fix Hyper first line precent sign
-unsetopt PROMPT_SP
