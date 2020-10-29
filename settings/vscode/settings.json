@@ -55,4 +55,5 @@
   "editor.fontSize": 13,
   "editor.formatOnType": true,
   "editor.renameOnType": true,
+  "editor.formatOnSave": true,
 }
