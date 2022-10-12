@@ -1,7 +1,0 @@
-# IntelliJ & PyCharm
-*.idea
-.idea/*
-out/*
-
-# Python byte code
-*.pyc
