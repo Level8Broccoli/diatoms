@@ -1,0 +1,5 @@
+---
+
+docker_gpg_url: https://download.docker.com/linux/ubuntu/gpg
+docker_repo: deb https://download.docker.com/linux/ubuntu jammy stable
+docker_compose_url: https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-x86_64

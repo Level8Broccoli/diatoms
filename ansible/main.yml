@@ -1,0 +1,25 @@
+---
+
+- hosts: localhost
+
+  vars_files: 
+  - docker/vars.yml
+
+  tasks:
+  - name: Setup Docker
+    ansible.builtin.include_tasks: docker/tasks.yml
+    tags: docker
+    
+  - name: Install Git
+    ansible.builtin.apt: 
+      name: git
+      update_cache: yes
+    become: yes
+    tags: git
+  
+  - name: Install Tmux
+    ansible.builtin.apt:
+      name: tmux
+      update_cache: yes
+    become: yes
+    tags: tmux
