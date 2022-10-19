@@ -4,6 +4,7 @@
 
   vars_files: 
   - docker/vars.yml
+  - shell/vars.yml
 
   tasks:
   - name: Setup Docker
@@ -23,3 +24,7 @@
       update_cache: yes
     become: yes
     tags: tmux
+  
+  - name: Setup Shell
+    ansible.builtin.include_tasks: shell/tasks.yml
+    tags: shell
