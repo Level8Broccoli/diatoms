@@ -28,3 +28,7 @@
   - name: Setup Shell
     ansible.builtin.include_tasks: shell/tasks.yml
     tags: shell
+
+  - name: Install Rust
+    ansible.builtin.include_tasks: rust/tasks.yml
+    tags: rust

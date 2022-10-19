@@ -19,17 +19,17 @@
     tags: shell
 
   - name: Oh-My-Zsh
+    when: oh_my_stats.stat.exists == False
     ansible.builtin.get_url: 
       url: https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
       dest: ~/.oh-my-installer
       mode: +x
-    when: oh_my_stats.stat.exists == False
     tags: shell
 
   - name: Oh-My-Zsh
+    when: oh_my_stats.stat.exists == False
     ansible.builtin.shell: 
       cmd: ~/.oh-my-installer
-    when: oh_my_stats.stat.exists == False
     tags: shell
 
   - name: Setup Zsh plugins
