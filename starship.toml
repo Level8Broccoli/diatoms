@@ -1,15 +1,16 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
+# #a3aed2 -> #769ff0
+
 format = """
-[](#a3aed2)\
-[ $directory ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+[](fg:#a3aed2)\
+[ $directory ](fg:#090c0b bg:#a3aed2)\
+[](fg:#a3aed2 bg:#769ff0)\
 [ $git_branch ](fg:black bg:#769ff0)\ 
 [](fg:#769ff0 bg:#394260)\
-$git_status\
+[ $git_status ](fg:#769ff0 bg:#394260)\
 [](fg:#394260 bg:#212736)\
-[](fg:#212736 bg:#1d2230)\
-$time\
+[ $time ](fg:#a0a9cb bg:#1d2230)\
 [ ](fg:#1d2230)\
 \n$character"""
 
@@ -22,11 +23,9 @@ symbol = ""
 format = '$symbol $branch'
 
 [git_status]
-style = "bg:#394260"
-format = '[[( $all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+format = '$all_status$ahead_behind'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+format = ' $time'
