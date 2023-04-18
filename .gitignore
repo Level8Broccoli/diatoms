@@ -4,3 +4,4 @@
 # Exeptions
 !.gitignore
 !README.md
+!starship.toml
