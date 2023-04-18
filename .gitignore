@@ -1,7 +1,13 @@
 # Ignore everything
-*
+/*/
+/*.*
 
 # Exeptions
 !.gitignore
 !README.md
+
 !starship.toml
+
+!/nvim
+
+!/alacritty
