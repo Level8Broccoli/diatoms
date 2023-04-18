@@ -1,6 +1,10 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
 format = """
+$character\
+"""
+
+right_format = """
 [](fg:#a3aed2)\
 [ $directory ](bold fg:#090c0b bg:#a3aed2)\
 [](fg:#a3aed2 bg:#769ff0)\
@@ -10,11 +14,10 @@ format = """
 [](fg:#394260 bg:#212736)\
 [ $time](fg:#a0a9cb bg:#1d2230)\
 [ ](fg:#1d2230)\
-\n$character"""
+"""
 
 [directory]
 format = "$path"
-truncation_length = 3
 
 [git_branch]
 symbol = ""
