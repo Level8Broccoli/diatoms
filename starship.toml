@@ -1,16 +1,14 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
-# #a3aed2 -> #769ff0
-
 format = """
 [](fg:#a3aed2)\
-[ $directory ](fg:#090c0b bg:#a3aed2)\
+[ $directory ](bold fg:#090c0b bg:#a3aed2)\
 [](fg:#a3aed2 bg:#769ff0)\
 [ $git_branch ](fg:black bg:#769ff0)\ 
 [](fg:#769ff0 bg:#394260)\
-[ $git_status ](fg:#769ff0 bg:#394260)\
+[ $git_status](fg:#769ff0 bg:#394260)\
 [](fg:#394260 bg:#212736)\
-[ $time ](fg:#a0a9cb bg:#1d2230)\
+[ $time](fg:#a0a9cb bg:#1d2230)\
 [ ](fg:#1d2230)\
 \n$character"""
 
@@ -29,3 +27,7 @@ format = '$all_status$ahead_behind'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 format = ' $time'
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
