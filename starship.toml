@@ -14,8 +14,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#090c0c bg:#a3aed2"
-format = "[ $path ]($style)"
+format = "$path"
 truncation_length = 3
 
 [git_branch]
