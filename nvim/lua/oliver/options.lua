@@ -17,8 +17,10 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.showtabline = 2
 
 -- Set indentation to 2 spaces
+vim.o.tapstop = 2
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
+vim.o.shiftround = true
 
 -- Show line under curser
 vim.o.cursorline = true
